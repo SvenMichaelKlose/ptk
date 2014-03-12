@@ -1,0 +1,68 @@
+main.o: main.cc ../../src/ptk/frame.h ../../src/ptk/dim.h \
+ ../../src/ptk/tree.h ../../src/ptk/config.h ../../src/ptk/msgbase.h \
+ ../../src/ptk/ptk.h ../../src/ptk/frame.h ../../src/ptk/bitmap.h \
+ ../../src/ptk/image.h /usr/include/string.h /usr/include/features.h \
+ /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
+ /usr/include/xlocale.h ../../src/ptk/color.h ../../src/ptk/font.h \
+ ../../src/ptk/layout.h ../../src/ptktoolkit/tkScrollField.h \
+ ../../src/ptktoolkit/tkScrollBar.h \
+ ../../src/ptktoolkit/tkScrollBarBase.h \
+ ../../src/ptktoolkit/tkScrollFieldBase.h ../../src/ptktoolkit/tkWindow.h \
+ ../../src/ptk/wmshell.h
+
+../../src/ptk/frame.h:
+
+../../src/ptk/dim.h:
+
+../../src/ptk/tree.h:
+
+../../src/ptk/config.h:
+
+../../src/ptk/msgbase.h:
+
+../../src/ptk/ptk.h:
+
+../../src/ptk/frame.h:
+
+../../src/ptk/bitmap.h:
+
+../../src/ptk/image.h:
+
+/usr/include/string.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/predefs.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h:
+
+/usr/include/xlocale.h:
+
+../../src/ptk/color.h:
+
+../../src/ptk/font.h:
+
+../../src/ptk/layout.h:
+
+../../src/ptktoolkit/tkScrollField.h:
+
+../../src/ptktoolkit/tkScrollBar.h:
+
+../../src/ptktoolkit/tkScrollBarBase.h:
+
+../../src/ptktoolkit/tkScrollFieldBase.h:
+
+../../src/ptktoolkit/tkWindow.h:
+
+../../src/ptk/wmshell.h:

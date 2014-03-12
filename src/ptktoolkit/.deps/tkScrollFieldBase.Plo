@@ -1,0 +1,39 @@
+tkScrollFieldBase.lo: tkScrollFieldBase.cc ../ptk/frame.h ../ptk/dim.h \
+ ../ptk/tree.h ../ptk/config.h ../ptk/msgbase.h tkScrollFieldBase.h \
+ ../ptk/layout.h tkScrollBarBase.h tkPanel.h ../ptk/border.h \
+ ../ptk/color.h ../ptk/frame.h ../ptk/console.h ../ptk/msg.h \
+ ../ptk/embed.h ../ptk/console.h ../ptk/plane.h
+
+../ptk/frame.h:
+
+../ptk/dim.h:
+
+../ptk/tree.h:
+
+../ptk/config.h:
+
+../ptk/msgbase.h:
+
+tkScrollFieldBase.h:
+
+../ptk/layout.h:
+
+tkScrollBarBase.h:
+
+tkPanel.h:
+
+../ptk/border.h:
+
+../ptk/color.h:
+
+../ptk/frame.h:
+
+../ptk/console.h:
+
+../ptk/msg.h:
+
+../ptk/embed.h:
+
+../ptk/console.h:
+
+../ptk/plane.h:

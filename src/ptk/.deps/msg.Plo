@@ -1,0 +1,13 @@
+msg.lo: msg.cc frame.h dim.h tree.h config.h msgbase.h msg.h
+
+frame.h:
+
+dim.h:
+
+tree.h:
+
+config.h:
+
+msgbase.h:
+
+msg.h:

@@ -1,0 +1,16 @@
+pointer.lo: pointer.cc frame.h dim.h tree.h config.h msgbase.h pointer.h \
+ msg.h
+
+frame.h:
+
+dim.h:
+
+tree.h:
+
+config.h:
+
+msgbase.h:
+
+pointer.h:
+
+msg.h:

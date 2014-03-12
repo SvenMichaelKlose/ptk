@@ -1,0 +1,23 @@
+$Id: ChangeLog,v 1.1.1.1 2000/09/30 13:42:09 sven Exp $
+$Source: /home/cvsroot/ptk/ChangeLog,v $
+
+2000-15-02: 0.0.4
+
+	- Less headers are included to speed up compiling the stuff.
+	- Some x11 code moved to drv_* objects.
+	- ptktests got some more things to play around with.
+	- Manual updated.
+	- Mute output by setting PTK_NO_FSTREAM_H in config.h.
+	- tkEditString clears the input buffer (default).
+	- lmHint::max works.
+	- Removed flush brake from frame::nextRefresh
+	- Refresh works in multiple windows.
+	- Reduced class dependecies significantly.
+
+2000-20-01: 0.0.1
+
+	Removed old BSD Makefiles. Now autoconf and automake are used.
+	Now there're 2 libraries:
+
+	libptk		- ptk basics
+	libptktoolkit 	- Experimental widget set

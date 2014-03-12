@@ -1,0 +1,64 @@
+Layout management:
+
+layout.cc contains some screen elements that auto-layout their contents but
+are not visible.
+At the time you can:
+
+   - Make a frame the same size as its parent.
+   - Set up tables with cells.
+
+Flow layout is also needed.
+
+The object lmHint contains layout information and can be passed to a layout
+element at construction or at run-time.
+Hints define how a frame is positioned and sized within its parent.
+
+Position hints:
+   enum gravity {
+     center = 0x1000,
+     top    = 0x2000,
+     bottom = 0x3000,
+     left   = 0x2000,
+     right  = 0x3000
+   };
+
+   enum gravity {
+     center = 0x1000,
+     top    = 0x2000,
+     bottom = 0x3000,
+     left   = 0x2000,
+     right  = 0x3000
+   };
+
+All hint must be known to contruct a lmHint object.
+
+    lmHint(pos_x, pos_y, size_x, size_y);
+
+. Class 'layout'
+
+Class layout has methods to make real values from a hint of one axis most of
+the derived classes make use of:
+
+  int getSize(int current_size, int hint_fixed_val, int hint, int min_size);
+  int getMinSize(int current_size, int hint, int min_size);
+  int getPosition(int min_size, int current_size, int parents_size, int hint);
+  int getPercent(int hint_fixed_val, int hint);
+
+. How is a layout set up?
+
+Every item can be asked about its minimum size using the virtual minx()/miny()
+functions. If you want a frame to re-layout its contents, call its virtual
+update() method.
+
+. Class 'lmEqual'
+
+This class makes its subframe the same size of its parent frame if no
+particular hints were specified.
+
+. Class 'lmTable'
+
+
+
+Class hierarchy:
+
+   layout

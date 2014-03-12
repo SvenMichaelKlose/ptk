@@ -1,0 +1,117 @@
+test_stresstable.o: test_stresstable.cc /usr/include/math.h \
+ /usr/include/features.h /usr/include/bits/predefs.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
+ /usr/include/bits/huge_val.h /usr/include/bits/huge_valf.h \
+ /usr/include/bits/huge_vall.h /usr/include/bits/inf.h \
+ /usr/include/bits/nan.h /usr/include/bits/mathdef.h \
+ /usr/include/bits/mathcalls.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h ../../src/ptk/frame.h \
+ ../../src/ptk/dim.h ../../src/ptk/tree.h ../../src/ptk/config.h \
+ ../../src/ptk/msgbase.h ../../src/ptk/console.h ../../src/ptk/color.h \
+ ../../src/ptk/msg.h ../../src/ptk/frame.h ../../src/ptk/embed.h \
+ ../../src/ptk/console.h ../../src/ptk/ptk.h \
+ ../../src/ptktoolkit/tkScrollField.h ../../src/ptktoolkit/tkScrollBar.h \
+ ../../src/ptktoolkit/tkScrollBarBase.h ../../src/ptk/layout.h \
+ ../../src/ptktoolkit/tkScrollFieldBase.h \
+ ../../src/ptktoolkit/tkTextButton.h ../../src/ptk/wmshell.h \
+ ../../src/ptktoolkit/tkButton.h ../../src/ptktoolkit/tkPanel.h \
+ ../../src/ptk/border.h ../../src/ptk/stdtext.h \
+ ../../src/ptktoolkit/tkWindow.h test_stresstable.h
+
+/usr/include/math.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/predefs.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/include/bits/huge_val.h:
+
+/usr/include/bits/huge_valf.h:
+
+/usr/include/bits/huge_vall.h:
+
+/usr/include/bits/inf.h:
+
+/usr/include/bits/nan.h:
+
+/usr/include/bits/mathdef.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+../../src/ptk/frame.h:
+
+../../src/ptk/dim.h:
+
+../../src/ptk/tree.h:
+
+../../src/ptk/config.h:
+
+../../src/ptk/msgbase.h:
+
+../../src/ptk/console.h:
+
+../../src/ptk/color.h:
+
+../../src/ptk/msg.h:
+
+../../src/ptk/frame.h:
+
+../../src/ptk/embed.h:
+
+../../src/ptk/console.h:
+
+../../src/ptk/ptk.h:
+
+../../src/ptktoolkit/tkScrollField.h:
+
+../../src/ptktoolkit/tkScrollBar.h:
+
+../../src/ptktoolkit/tkScrollBarBase.h:
+
+../../src/ptk/layout.h:
+
+../../src/ptktoolkit/tkScrollFieldBase.h:
+
+../../src/ptktoolkit/tkTextButton.h:
+
+../../src/ptk/wmshell.h:
+
+../../src/ptktoolkit/tkButton.h:
+
+../../src/ptktoolkit/tkPanel.h:
+
+../../src/ptk/border.h:
+
+../../src/ptk/stdtext.h:
+
+../../src/ptktoolkit/tkWindow.h:
+
+test_stresstable.h:

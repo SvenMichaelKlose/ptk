@@ -1,0 +1,5 @@
+tree.lo: tree.cc tree.h config.h
+
+tree.h:
+
+config.h:

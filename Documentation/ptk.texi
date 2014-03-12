@@ -1,0 +1,161 @@
+\input texinfo   @c -*-texinfo-*-
+@include 'version.texi'
+
+@c %**start of header
+@setfilename ptk.info
+@settitle Sample Document
+@c %**end of header
+
+@setchapternewpage odd
+
+@ifinfo
+This is the ptk user manual
+
+Copyright @copyright{} 2000 Sven Klose
+@end ifinfo
+
+@titlepage
+@sp 10
+@center @titlefont{ptk user's manual}
+
+@c The following two commands start the copyright page.
+@page
+@vskip 0pt plus 1filll
+Copyright @copyright{} 2000 Sven Klose
+@end titlepage
+
+@node    Top, Introduction, (dir), (dir)
+
+@menu
+* Introduction::	What is ptk?
+* Overview::		Features of ptk.
+* Installation::	Installing ptk
+* Configuration::	Configuration before compiling
+* libptk::		The core library
+* libptktoolkit::	Experimental widget set
+@end menu
+
+@node    Introduction, Overview, Top, Top
+@chapter Introduction
+
+ptk is a lightweight portable graphical user interface written in C++.
+It's out for environments where ressources are usually scarce such as
+so-called embedded systems. Any other feature than serving a graphical
+console is none of ptk's business.
+
+ptk was done from scratch. The first versions of ptk ran under DJ Delorie's GNU port for DOS and were ported to Unices later on.
+
+@section Who would use ptk?
+At the time ptk is enough for small applications; if you got some reckoning to
+do, please email to sven@@devon.net but take a look at the header files.
+
+@node    Overview,  Installation, Introduction, Top
+@chapter Overview
+
+At the time ptk consists of two libraries a and a few code snippets that make
+use of them: libptk contains the core while libptktoolkit contains an
+experimental widget set.
+
+@node	Installation, Configuration, Overview, Top
+@chapter Installation
+
+Go to the directory where you want to compile the stuff and type:
+
+	tar cvzf ptk-*.tar.gz
+	cd ptk
+	aclocal && automake --add-missing && autoconf && ./configure
+	make install
+or
+	make uninstall
+
+to get rid of this crap. GNU make is used, so type gmake on BSD systems.
+The following gets installed:
+
+@enumerate
+@item
+libptk (Core library)
+@item
+libptktoolkit (Experimental widget set)
+@item
+ptkhelloworld
+@item
+ptktests (Misc. tests)
+@item
+ptkscribble (Scribble on 16-bit drawers)
+@item
+ptkdb (Attempt of writing a database user interface with ptk)
+@end enumerate
+
+The libraries are installed to '/usr/local/lib'; update your /etc/ld.so.conf
+accordingly.
+
+@node Configuration, libptk, Installation, Top
+@chapter Configuration
+
+Machine dependend and debugging configuration is found in src/ptk/config.h.
+At the time only EMBED_X11WRAP works.
+
+@node	libptk, Class tree, Configuration, Top
+@menu
+Core:
+* Class tree::		Tree node
+* Class dim::		Rectangular area
+* Class frame::		Drawing, base for all screen elements
+* Class console::	The console
+* Class msg::		Event messaging
+
+Refer to header files for function lists.
+@end menu
+
+@node Class tree, Class dim, libptk, libptk
+@chapter Class tree
+
+This is the basest object in the hierarchy. It connects all
+elements in a double-linked list tree of which the root must be a console
+class object to get the tree displayed.
+The parent/child/sibling relationships define the priority of the elements
+on the screen. However, clipping and drawing is done in class 'frame'.
+
+@node Class dim, Class frame, Class tree, libptk
+@chapter Class dim
+
+This class is derived from class 'tree' and holds the coordinates of a
+rectangular area relative to its parent node.
+Apart from the get/set functions for coordinates you can clip lists of class
+'dim' objects. This is mainly used by class 'frame'.
+
+@node Class frame, Class console, Class dim, libptk
+@chapter Class frame
+
+This class is derived from class dim. It handles drawing and defines
+a virtual interface for event passing etc. When using class frame methods for
+positioning and resizing the screen is updated immediately and thus should
+be used when neccessary to avoid double repaints.
+
+The frame tree is always (re)painted in two passes from the to the
+leaves first and then vice versa. The flag 'clipByChilds' defines weather
+the element is drawn on the way up (false) or on the way down to
+the root (true).
+
+@node Class console, Class msg, Class frame, libptk
+@chapter Class console
+
+The console is the root node of the element tree. It sends pointer and
+keyboard events to elements. There's only a single instance at once; get a
+pointer to it using its instance() method.
+Every toplevel screen element is a child node of the console object.
+Messages from child nodes are discarded.
+
+@node Class msg, libptktoolkit, Class console, libptk
+@chapter Class msg
+
+Messages are send to frames when the pointer moves, a button is pressed or
+released, an element was dragged and so on and so on.
+If an element can't process a message, it is send to the parent node if there
+is one.
+
+@node libptktoolkit, , Class msg, Top
+@menu
+@end menu
+
+@bye

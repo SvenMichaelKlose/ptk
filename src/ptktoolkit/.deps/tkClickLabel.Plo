@@ -1,0 +1,34 @@
+tkClickLabel.lo: tkClickLabel.cc ../ptk/frame.h ../ptk/dim.h \
+ ../ptk/tree.h ../ptk/config.h ../ptk/msgbase.h tkClickLabel.h tkLabel.h \
+ ../ptk/plane.h ../ptk/color.h toolkit.h ../ptk/console.h ../ptk/msg.h \
+ ../ptk/frame.h ../ptk/embed.h ../ptk/console.h
+
+../ptk/frame.h:
+
+../ptk/dim.h:
+
+../ptk/tree.h:
+
+../ptk/config.h:
+
+../ptk/msgbase.h:
+
+tkClickLabel.h:
+
+tkLabel.h:
+
+../ptk/plane.h:
+
+../ptk/color.h:
+
+toolkit.h:
+
+../ptk/console.h:
+
+../ptk/msg.h:
+
+../ptk/frame.h:
+
+../ptk/embed.h:
+
+../ptk/console.h:

@@ -1,0 +1,57 @@
+
+* Class signal::	TODO: Type checked signals
+
+Layout:
+* Class lmHint::	Layout hints
+* Class layout::	Basic work with layout hints
+* Class lmEqual::	Force same size as parent
+* Class lmCell::	Table cell
+* Class lmTable::	Tables
+
+Drawing:
+* Class plane::		Filling rectangular areas
+* Class border::	Drawing rectangles
+* Class stdtext::	Standard string
+* Class bitmap::	Images
+
+Hardware dependent I/O:
+* Class color::		Allocating colors
+* Class font::		Allocating fonts
+* Class drawer::	Screen I/O
+* Class display::	Multiple screens
+* Class windowdrawer::	Window I/0
+* Class keyoard::	Keyboard I/O
+* Class pointer::	Pointer I/O
+* Class embed::		Translating native messages into ptk messages
+
+TODO:
+* Class lmFlow::	Flow layout for text etc.
+
+Widgets:
+* Class tkLoweredPanel::	A lowered panel
+* Class tkRaisedPanel::		A raised panel
+* Class tkSeparator::		Separators
+* Class tkLabel::		Text with background
+* Class tkClickLabel::		Like tkLabel; triggers function
+* Class tkButton::		Buttons
+* Class tkTextButton::		Textbuttons
+* Class tkScrollField::		Scrollfields
+* Class tkScrollBar::		Scrollbars
+* Class tkMenuBar::		Menu bars
+* Class tkMenuPage::		Menu pages
+* Class tkMenuItem::		User defined menu item
+* Class tkWindow::		Windows
+
+Abtract widgets:
+* Class tkPanel::		Panel with user colors
+* Class tkScrollFieldBase::
+* Class tkScrollBarBase::
+
+Dialogs:
+* Class tkAlert::		Message window
+
+In progress:
+* Class TreeNode::		Trees
+
+TODO:
+* Class tkFSB::			File selector box

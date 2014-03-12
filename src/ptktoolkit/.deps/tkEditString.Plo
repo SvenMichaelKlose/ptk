@@ -1,0 +1,67 @@
+tkEditString.lo: tkEditString.cc ../ptk/frame.h ../ptk/dim.h \
+ ../ptk/tree.h ../ptk/config.h ../ptk/msgbase.h ../ptk/console.h \
+ ../ptk/color.h ../ptk/msg.h ../ptk/frame.h ../ptk/embed.h \
+ ../ptk/console.h tkEditString.h ../ptk/layout.h tkInputField.h \
+ ../ptk/font.h ../ptk/plane.h ../ptk/stdtext.h tkPanel.h ../ptk/border.h \
+ /usr/include/string.h /usr/include/features.h \
+ /usr/include/bits/predefs.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h \
+ /usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h \
+ /usr/include/xlocale.h
+
+../ptk/frame.h:
+
+../ptk/dim.h:
+
+../ptk/tree.h:
+
+../ptk/config.h:
+
+../ptk/msgbase.h:
+
+../ptk/console.h:
+
+../ptk/color.h:
+
+../ptk/msg.h:
+
+../ptk/frame.h:
+
+../ptk/embed.h:
+
+../ptk/console.h:
+
+tkEditString.h:
+
+../ptk/layout.h:
+
+tkInputField.h:
+
+../ptk/font.h:
+
+../ptk/plane.h:
+
+../ptk/stdtext.h:
+
+tkPanel.h:
+
+../ptk/border.h:
+
+/usr/include/string.h:
+
+/usr/include/features.h:
+
+/usr/include/bits/predefs.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.4.3/include/stddef.h:
+
+/usr/include/xlocale.h:

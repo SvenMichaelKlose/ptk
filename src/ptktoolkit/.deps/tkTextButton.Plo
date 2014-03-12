@@ -1,0 +1,41 @@
+tkTextButton.lo: tkTextButton.cc ../ptk/frame.h ../ptk/dim.h \
+ ../ptk/tree.h ../ptk/config.h ../ptk/msgbase.h tkTextButton.h \
+ ../ptk/wmshell.h tkButton.h ../ptk/layout.h tkPanel.h ../ptk/border.h \
+ ../ptk/color.h ../ptk/frame.h ../ptk/stdtext.h ../ptk/console.h \
+ ../ptk/msg.h ../ptk/embed.h ../ptk/console.h
+
+../ptk/frame.h:
+
+../ptk/dim.h:
+
+../ptk/tree.h:
+
+../ptk/config.h:
+
+../ptk/msgbase.h:
+
+tkTextButton.h:
+
+../ptk/wmshell.h:
+
+tkButton.h:
+
+../ptk/layout.h:
+
+tkPanel.h:
+
+../ptk/border.h:
+
+../ptk/color.h:
+
+../ptk/frame.h:
+
+../ptk/stdtext.h:
+
+../ptk/console.h:
+
+../ptk/msg.h:
+
+../ptk/embed.h:
+
+../ptk/console.h:

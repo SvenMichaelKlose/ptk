@@ -1,0 +1,26 @@
+console.lo: console.cc frame.h dim.h tree.h config.h msgbase.h console.h \
+ color.h msg.h embed.h display.h pointer.h keyboard.h
+
+frame.h:
+
+dim.h:
+
+tree.h:
+
+config.h:
+
+msgbase.h:
+
+console.h:
+
+color.h:
+
+msg.h:
+
+embed.h:
+
+display.h:
+
+pointer.h:
+
+keyboard.h:

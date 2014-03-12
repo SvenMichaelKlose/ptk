@@ -1,0 +1,14 @@
+toolkit.lo: toolkit.cc ../ptk/frame.h ../ptk/dim.h ../ptk/tree.h \
+ ../ptk/config.h ../ptk/msgbase.h toolkit.h
+
+../ptk/frame.h:
+
+../ptk/dim.h:
+
+../ptk/tree.h:
+
+../ptk/config.h:
+
+../ptk/msgbase.h:
+
+toolkit.h:
