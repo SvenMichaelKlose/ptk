@@ -4,4 +4,4 @@ libptktoolkit_la_SOURCES = tkAlert.cc tkButton.cc tkClickLabel.cc \
 	tkScrollBar.cc tkScrollBarBase.cc tkScrollField.cc \
 	tkScrollFieldBase.cc tkSeparator.cc tkTextButton.cc tkTree.cc \
 	tkWindow.cc toolkit.cc
-INCLUDES = -I../ptk
+libptktoolkit_la_CPPFLAGS = -I../ptk
