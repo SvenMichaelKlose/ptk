@@ -38,8 +38,8 @@ void MainMenu::func_quit(frame* f,void*)
 
 MainMenu::MainMenu() : tkWindow("ptktests: main menu")
 {
-  lmHint xmax(center,center,lmHint::max,lmHint::min);
-  lmHint rmin(right,center,lmHint::min,lmHint::min);
+  lmHint xmax(lmHint::center,lmHint::center,lmHint::max,lmHint::min);
+  lmHint rmin(lmHint::right,lmHint::center,lmHint::min,lmHint::min);
   lmTable* tab=new lmTable(&xmax,&xmax,1,0);
 
   tkMenuBar* bar=new tkMenuBar();

@@ -21,8 +21,8 @@ void tkAlert::func_close (frame* f,void*)
 
 tkAlert::tkAlert (char* title, char* msg) : tkWindow (title)
 {
-  lmHint xmax (center, center, lmHint::max, lmHint::min);
-  lmHint cmin (center, center, lmHint::min, lmHint::min);
+  lmHint xmax (lmHint::center, lmHint::center, lmHint::max, lmHint::min);
+  lmHint cmin (lmHint::center, lmHint::center, lmHint::min, lmHint::min);
   console* con = console::instance ();
   lmTable* tab = new lmTable (&xmax, &cmin, 1, 0);
   link (new lmEqual)->link (new tkRaisedPanel)->link (tab);

@@ -80,7 +80,7 @@ tkMenuBar::tkMenuBar() : toolkit()
 {
   console* con=console::instance();
   color* _c[4]; for (int a=3;a>=0;a--) _c[a]=con->sysColor(a);
-  lmHint lh(center,center,lmHint::min,lmHint::min);
+  lmHint lh(lmHint::center,lmHint::center,lmHint::min,lmHint::min);
   frame::link(new lmEqual)
     ->link(new tkRaisedPanel)
     ->link(_tab=new lmTable(&lh,&lh,0,1));
@@ -105,7 +105,7 @@ tkMenuPopup::tkMenuPopup(int x, int y, int w, int h)
   console* con=console::instance();
   color* _c[4];
   for (int a=3;a>=0;a--) _c[a]=con->sysColor(a);
-  lmHint cd(center,center,lmHint::max,lmHint::min);
+  lmHint cd(lmHint::center,lmHint::center,lmHint::max,lmHint::min);
   frame::link(new lmEqual)
     ->link(new tkRaisedPanel)
     ->link(_tab=new lmTable(&cd,&cd,1,0));
@@ -172,7 +172,7 @@ void tkMenuItem::onClick()
 tkMenuItemBase::tkMenuItemBase(char* name) : tkClickLabel()
 {
   console* con=console::instance();
-  lmHint hint((gravity) 3,center,lmHint::min,lmHint::min);
+  lmHint hint((lmHint::gravity) 3,lmHint::center,lmHint::min,lmHint::min);
   frame::link(new lmEqual(&hint))
     -> link(new stdtext(name,con->sysColor(0),con->sysColor(2)));
 }

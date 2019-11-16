@@ -18,9 +18,9 @@ tkEditString::tkEditString(char* name,char* buffer, int buffersize,
 			   bool pwdmode, bool clear)
   : lmTable(0,1)
 {
-  lmHint lcmin(left, center, (lmHint::size) (min|2), lmHint::min);
-  lmHint xymin(center, center, lmHint::min, lmHint::min);
-  lmHint xmax(center, center, lmHint::max, lmHint::min);
+  lmHint lcmin(lmHint::left, lmHint::center, (lmHint::size) (lmHint::min|2), lmHint::min);
+  lmHint xymin(lmHint::center, lmHint::center, lmHint::min, lmHint::min);
+  lmHint xmax(lmHint::center, lmHint::center, lmHint::max, lmHint::min);
   console* con=console::instance();
   if (clear) memset(buffer,0,buffersize);
   link(new lmEqual,&xymin,&lcmin)->link(new plane(con->sysColor(2)))

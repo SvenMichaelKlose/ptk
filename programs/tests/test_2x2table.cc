@@ -22,8 +22,8 @@ void test_2x2table::myfunc(frame*f,void*) { f->close(); }
 
 test_2x2table::test_2x2table() : tkWindow("ptktests: 2x2 table with buttons")
 {
-  lmHint xmax(center,center,lmHint::max,lmHint::min);
-  lmHint max(center,center,lmHint::max,lmHint::max);
+  lmHint xmax(lmHint::center,lmHint::center,lmHint::max,lmHint::min);
+  lmHint max(lmHint::center,lmHint::center,lmHint::max,lmHint::max);
   lmTable* tab_btn; 
   link(new lmEqual)
     -> link(tab_btn=new lmTable(&max,2,2));

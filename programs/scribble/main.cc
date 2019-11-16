@@ -50,7 +50,9 @@ int scribble::receiver (msgbase* m)
 	&& (_yp >= 0 && _yp < _bmp->height ())) {
       _bmp->get ()->set_pixel (_xp, _yp, 192, 192, 255,
       			       _bmp->get ()->format ()->size);
-      _bmp->refresh (&dim (_xp, _yp, 1, 1));
+      dim * d = new dim (_xp, _yp, 1, 1);
+      _bmp->refresh (d);
+      delete d;
     }
   }
   return _discard;

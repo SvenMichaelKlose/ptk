@@ -63,9 +63,9 @@ tkScrollFieldBase::tkScrollFieldBase (tkScrollBarBase* barx,
     _barx (barx), _bary (bary),
     _former_view (0)
 {
-  lmHint xymax (center, center, lmHint::max, lmHint::max);
-  lmHint xmax (center, center, lmHint::max, lmHint::min);
-  lmHint ymax (center, center, lmHint::min, lmHint::max);
+  lmHint xymax (lmHint::center, lmHint::center, lmHint::max, lmHint::max);
+  lmHint xmax (lmHint::center, lmHint::center, lmHint::max, lmHint::min);
+  lmHint ymax (lmHint::center, lmHint::center, lmHint::min, lmHint::max);
   console* con = console::instance ();
 
   lmTable::link (_view = new plane (con->sysColor (3)), &xymax);

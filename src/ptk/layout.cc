@@ -313,7 +313,7 @@ void lmTable::getmins(bool do_update)
     // Initialize next row
     if (yrefp)
       yrefp = yrefp->next ();
-    if ((sizeY & equal) == equal)
+    if ((sizeY & lmHint::equal) == lmHint::equal)
       last_h = ymin;
     if (yshare && ymaxleft)
       yshare -= yshare / ymaxleft;
@@ -331,11 +331,11 @@ void lmTable::defaults (lmHint* cell_def, lmHint* item_def)
   if (cell_def)
     _cell_def = new lmHint (cell_def);
   else
-    _cell_def = new lmHint (center, center, size::min, size::min);
+    _cell_def = new lmHint (lmHint::center, lmHint::center, lmHint::size::min, lmHint::size::min);
   if (item_def)
     _item_def = new lmHint (item_def);
   else
-    _item_def = new lmHint (center, center, size::min, size::min);
+    _item_def = new lmHint (lmHint::center, lmHint::center, lmHint::size::min, lmHint::size::min);
 
   if (!(xcnt | ycnt)) {
 #ifdef DEBUG
@@ -367,7 +367,7 @@ lmTable::lmTable (lmHint* cell_def, lmHint* item_def, int nx, int ny,
 // Create default cell for table
 lmCell* lmTable::createCell (lmHint* c, lmHint* i)
 {
-  lmHint sc (center, center, size::min, size::min);
+  lmHint sc (lmHint::center, lmHint::center, lmHint::size::min, lmHint::size::min);
   return new lmCell (c ? c : &sc, i ? i : &sc);
 }
 
@@ -482,15 +482,15 @@ void lmEqual::dump (ofstream& o)
 int layout::getPosition (int cmin, int ccurrent, int avail, int poshint)
 {
   int v = 0;
-  switch (flag (poshint) & (perc - 1))
+  switch (flag (poshint) & (lmHint::perc - 1))
     {
-    case center:
+    case lmHint::center:
       v = (avail - ccurrent) / 2;
       return v + getPercent (avail, poshint);
     case 0:
-    case gravity::top: //case left:
+    case lmHint::gravity::top: //case left:
       return getPercent (avail, poshint);
-    case bottom: //case right:
+    case lmHint::bottom: //case right:
       v = avail - ccurrent;
       return v - getPercent (avail, poshint);
     default:
@@ -503,16 +503,16 @@ int layout::getPosition (int cmin, int ccurrent, int avail, int poshint)
 // the maximum available space
 int layout::getSize (int ccurrent, int avail, int sizehint, int cmin)
 {
-  switch (flag (sizehint) & (perc - 1))
+  switch (flag (sizehint) & (lmHint::perc - 1))
     {
     case 0:
-    case min:
+    case lmHint::min:
       return cmin;
-    case max:
+    case lmHint::max:
       return avail - getPercent (avail, sizehint);
-    case equal:
+    case lmHint::equal:
       return avail - getPercent (avail, sizehint);
-    case preset:
+    case lmHint::preset:
       return ccurrent;
     default:
     return avail - getPercent (avail, sizehint);
@@ -523,14 +523,14 @@ int layout::getSize (int ccurrent, int avail, int sizehint, int cmin)
 // Get min. size from current size or min. size depending on hint
 int layout::getMinSize (int ccurrent, int sizehint, int cmin)
 {
-  if ((flag (sizehint) & (perc - 1)) == preset)
+  if ((flag (sizehint) & (lmHint::perc - 1)) == lmHint::preset)
     return ccurrent;
   return cmin + getPercent (cmin, sizehint);
 }
 
 int layout::getPercent (int v, int hint)
 {
-  if (hint & perc)
+  if (hint & lmHint::perc)
     return v = v * val (hint) / 100;
   return val (hint);
 }

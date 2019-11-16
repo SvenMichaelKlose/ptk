@@ -5,8 +5,8 @@ In this directory try
 
   cd src/ptk
   ln -s src/ptk/x11/* src/ptk/
-  aclocal
   libtoolize
+  aclocal
   automake --add-missing
   autoconf
   ./configure --disable-static

@@ -40,7 +40,7 @@ frame* test_stresstable::mktable(int level)
   case 5:
     l = "(x)"; break;
   }
-  lmHint xmax (center, center, lmHint::max, lmHint::max);
+  lmHint xmax (lmHint::center, lmHint::center, lmHint::max, lmHint::max);
   lmTable* t = new lmTable (&xmax, &xmax, 6, 0);
   for (int y = 35; y > 0; y--)
     if (y == 34)//-level)

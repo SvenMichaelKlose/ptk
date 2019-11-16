@@ -16,7 +16,7 @@ tkPanel::tkPanel (color* cp, color* ct,
 	     	  int x, int y, int w, int h)
   : border (ct, cr, cb, cl, x, y, w, h), _cp (cp)
 {
-  lmHint _hint (center, center, (lmHint::size) (max | 2), (lmHint::size) (max | 2));
+  lmHint _hint (lmHint::center, lmHint::center, (lmHint::size) (lmHint::max | 2), (lmHint::size) (lmHint::max | 2));
   frame::link (new lmEqual (&_hint))
     -> link (_plane = new plane (cp))
     -> link (_connection = new lmEqual (&_hint));

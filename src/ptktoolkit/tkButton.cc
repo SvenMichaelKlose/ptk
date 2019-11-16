@@ -26,8 +26,8 @@ tkButton::tkButton (frame* cont, int xp, int yp, int w, int h)
 {
   color* black = console::instance ()->sysColor (0);
   setColors (black, black, black, black);
-  lmHint hint (center, center, (lmHint::size) (lmHint::max | 2), (lmHint::size) (lmHint::size) (max | 2));
-  lmHint hint2 (center, center, (lmHint::size) (min | 10), (lmHint::size) (min | 4));
+  lmHint hint (lmHint::center, lmHint::center, (lmHint::size) (lmHint::max | 2), (lmHint::size) (lmHint::size) (lmHint::max | 2));
+  lmHint hint2 (lmHint::center, lmHint::center, (lmHint::size) (lmHint::min | 10), (lmHint::size) (lmHint::min | 4));
   frame::link (new lmEqual (&hint))->link (_panel = new tkRaisedPanel)
     ->link(_connection = new lmEqual(&hint2));
   if (cont)

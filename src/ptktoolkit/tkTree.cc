@@ -72,8 +72,8 @@ tkTreeNode::tkTreeNode(char* title,void(*func)(frame*, void* data),
   : lmTable(1,0), _title(title),
     _sub(new lmTable(&center_center_min_min ,1,0))
 {
-  lmHint xmax(center,center,lmHint::max,lmHint::max);
-  lmHint cmin(center,center,lmHint::min,lmHint::min);
+  lmHint xmax(lmHint::center,lmHint::center,lmHint::max,lmHint::max);
+  lmHint cmin(lmHint::center,lmHint::center,lmHint::min,lmHint::min);
   lmTable* tab;
   frame::link(tab=new lmTable(0,1));
   tab->link(_sw=new tkTreeSwitch(this));
