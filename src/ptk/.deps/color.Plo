@@ -1,7 +1,0 @@
-color.lo: color.cc color.h display.h drv_color.h
-
-color.h:
-
-display.h:
-
-drv_color.h:

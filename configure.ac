@@ -43,6 +43,8 @@ AC_C_INLINE
 AC_TYPE_SIZE_T
 
 dnl Checks for library functions.
+AC_FUNC_MALLOC
+AC_CHECK_FUNCS([memset])
 
 AC_OUTPUT(src/Makefile src/ptk/Makefile src/ptktoolkit/Makefile Makefile \
 	programs/Makefile \

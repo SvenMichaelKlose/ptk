@@ -1,5 +1,0 @@
-keyboard.lo: keyboard.cc keyboard.h config.h
-
-keyboard.h:
-
-config.h:

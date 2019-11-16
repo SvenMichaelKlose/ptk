@@ -1,10 +1,12 @@
-main.o: main.cc ../../src/ptk/ptk.h ../../src/ptk/config.h \
- ../../src/ptk/frame.h ../../src/ptk/dim.h ../../src/ptk/tree.h \
- ../../src/ptk/msgbase.h ../../src/ptk/layout.h \
+main.o: main.cc /usr/include/stdc-predef.h ../../src/ptk/ptk.h \
+ ../../src/ptk/config.h ../../src/ptk/frame.h ../../src/ptk/dim.h \
+ ../../src/ptk/tree.h ../../src/ptk/msgbase.h ../../src/ptk/layout.h \
  ../../src/ptktoolkit/tkTextButton.h ../../src/ptk/wmshell.h \
  ../../src/ptktoolkit/tkButton.h ../../src/ptktoolkit/tkPanel.h \
  ../../src/ptk/border.h ../../src/ptk/color.h ../../src/ptk/stdtext.h \
  ../../src/ptktoolkit/tkWindow.h
+
+/usr/include/stdc-predef.h:
 
 ../../src/ptk/ptk.h:
 

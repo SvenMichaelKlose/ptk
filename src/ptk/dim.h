@@ -23,28 +23,6 @@ class dim : public tree {
    dim* split3 (dim*);
 
  public:
-   enum metric {
-     pixel,
-     perc   = 0x8000 // Take value as percentage of calculated size
-   };
-
-   // Size attributes
-   enum size {
-     min    = 0x1000, // mininum size
-     max    = 0x2000, // maximum size
-     equal  = 0x3000, // equal to any other dim (defined by layout classes)
-     preset = 0x4000  // don't change the current size
-   };
-
-   // Positioning
-   enum gravity {
-     center = 0x1000,
-     top    = 0x2000,
-     bottom = 0x3000,
-     left   = 0x2000,
-     right  = 0x3000
-   };
-
    int pt[4]; // *** must be declared private!
    int flag (int a) {return a&0xf000;}
    int  val (int a) {return a&0x0fff;}

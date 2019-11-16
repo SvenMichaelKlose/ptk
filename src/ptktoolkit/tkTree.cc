@@ -65,10 +65,12 @@ tkTreeSwitch::tkTreeSwitch(tkTreeNode* from) : tkRaisedPanel(), _from(from)
   setFocus(true);
 }
 
+lmHint center_center_min_min (lmHint::center,lmHint::center,lmHint::min,lmHint::min);
+
 tkTreeNode::tkTreeNode(char* title,void(*func)(frame*, void* data),
 		       frame* from, void* data)
   : lmTable(1,0), _title(title),
-    _sub(new lmTable(&lmHint(center,center,lmHint::min,lmHint::min),1,0))
+    _sub(new lmTable(&center_center_min_min ,1,0))
 {
   lmHint xmax(center,center,lmHint::max,lmHint::max);
   lmHint cmin(center,center,lmHint::min,lmHint::min);

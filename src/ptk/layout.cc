@@ -331,11 +331,11 @@ void lmTable::defaults (lmHint* cell_def, lmHint* item_def)
   if (cell_def)
     _cell_def = new lmHint (cell_def);
   else
-    _cell_def = new lmHint (center, center, lmHint::min, lmHint::min);
+    _cell_def = new lmHint (center, center, size::min, size::min);
   if (item_def)
     _item_def = new lmHint (item_def);
   else
-    _item_def = new lmHint (center, center, lmHint::min, lmHint::min);
+    _item_def = new lmHint (center, center, size::min, size::min);
 
   if (!(xcnt | ycnt)) {
 #ifdef DEBUG
@@ -367,7 +367,7 @@ lmTable::lmTable (lmHint* cell_def, lmHint* item_def, int nx, int ny,
 // Create default cell for table
 lmCell* lmTable::createCell (lmHint* c, lmHint* i)
 {
-  lmHint sc (center, center, lmHint::min, lmHint::min);
+  lmHint sc (center, center, size::min, size::min);
   return new lmCell (c ? c : &sc, i ? i : &sc);
 }
 
@@ -482,15 +482,15 @@ void lmEqual::dump (ofstream& o)
 int layout::getPosition (int cmin, int ccurrent, int avail, int poshint)
 {
   int v = 0;
-  switch (flag (poshint) & (lmHint::perc - 1))
+  switch (flag (poshint) & (perc - 1))
     {
-    case lmHint::center:
+    case center:
       v = (avail - ccurrent) / 2;
       return v + getPercent (avail, poshint);
     case 0:
-    case lmHint::top: //case lmHint::left:
+    case gravity::top: //case left:
       return getPercent (avail, poshint);
-    case lmHint::bottom: //case lmHint::right:
+    case bottom: //case right:
       v = avail - ccurrent;
       return v - getPercent (avail, poshint);
     default:
@@ -503,16 +503,16 @@ int layout::getPosition (int cmin, int ccurrent, int avail, int poshint)
 // the maximum available space
 int layout::getSize (int ccurrent, int avail, int sizehint, int cmin)
 {
-  switch (flag (sizehint) & (lmHint::perc - 1))
+  switch (flag (sizehint) & (perc - 1))
     {
     case 0:
-    case lmHint::min:
+    case min:
       return cmin;
-    case lmHint::max:
+    case max:
       return avail - getPercent (avail, sizehint);
-    case lmHint::equal:
+    case equal:
       return avail - getPercent (avail, sizehint);
-    case lmHint::preset:
+    case preset:
       return ccurrent;
     default:
     return avail - getPercent (avail, sizehint);
@@ -523,14 +523,14 @@ int layout::getSize (int ccurrent, int avail, int sizehint, int cmin)
 // Get min. size from current size or min. size depending on hint
 int layout::getMinSize (int ccurrent, int sizehint, int cmin)
 {
-  if ((flag (sizehint) & (lmHint::perc - 1)) == lmHint::preset)
+  if ((flag (sizehint) & (perc - 1)) == preset)
     return ccurrent;
   return cmin + getPercent (cmin, sizehint);
 }
 
 int layout::getPercent (int v, int hint)
 {
-  if (hint & lmHint::perc)
+  if (hint & perc)
     return v = v * val (hint) / 100;
   return val (hint);
 }

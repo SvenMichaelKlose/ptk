@@ -9,33 +9,34 @@
 #ifndef _ptk_layout_H
 #define _ptk_layout_H
 
+enum metric {
+  pixel,
+  perc   = 0x8000 // Take value as percentage of calculated size
+};
+
+// Size attributes
+enum size {
+  min    = 0x1000,    // mininum size
+  max    = 0x2000,    // maximum size
+  equal  = 0x3000,  // equal to any other dim (defined by layout classes)
+  preset = 0x4000  // don't change the current size
+};
+
+// Positioning
+enum gravity {
+  center = 0x1000,
+  top    = 0x2000,
+  bottom = 0x3000,
+  left   = 0x2000,
+  right  = 0x3000
+};
+
+
 class lmHint {
  private:
    int pt[4];
 
  public:
-   enum metric {
-     pixel,
-     perc   = 0x8000 // Take value as percentage of calculated size
-   };
-
-   // Size attributes
-   enum size {
-     min    = 0x1000,    // mininum size
-     max    = 0x2000,    // maximum size
-     equal  = 0x3000,  // equal to any other dim (defined by layout classes)
-     preset = 0x4000  // don't change the current size
-   };
-
-   // Positioning
-   enum gravity {
-     center = 0x1000,
-     top    = 0x2000,
-     bottom = 0x3000,
-     left   = 0x2000,
-     right  = 0x3000
-   };
-
    inline int flag(int a) {return a&0xf000;}
    inline int  val(int a) {return a&0x0fff;}
 
@@ -47,7 +48,7 @@ class lmHint {
 		pt[2] = d->pt[2];
 		pt[3] = d->pt[3];
    }
-   inline lmHint(dim::gravity x, dim::gravity y, lmHint::size w, lmHint::size h) {
+   inline lmHint(gravity x, gravity y, size w, size h) {
      pt[0]=x; pt[1]=y; pt[2]=w+x; pt[3]=h+y;
    }
 
