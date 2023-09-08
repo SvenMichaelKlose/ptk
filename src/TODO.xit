@@ -1,0 +1,17 @@
+[ ] wmshell does't get its position correctly.
+[ ] wmshell resize causes infinite messages.
+
+libptk:
+[ ] Typechecked signals
+[ ] color::manager
+[ ] morphable font objects
+[ ] lmFlow layout
+[ ] move hardware dependent code out of color, display, font, image and
+    windowdrawer into separate directory?
+[ ] send _inactive message if pointer leaves an X11 window
+[ ] Figure out how to handle images properly
+[ ] color names
+[ ] generic drawer for native platforms and buffered drawers
+
+libptktoolkit:
+[ ] Style manager
